@@ -1,4 +1,4 @@
-*,
+/* *,
 *::after,
 *::before{
     margin: 0;
@@ -24,4 +24,14 @@ footer {
     background-color: var(--primaryColor);
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0, 0.6);
     font-size: var(--font-size);  
+} */
+.landing-page {
+    background-image: url(https://i.postimg.cc/fRtBLYt7/placeholder2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    object-fit: cover;
+}
+.navbar {
+    box-shadow: 0 .5rem 1rem rgba(12, 121, 230, 0.6);
 }
