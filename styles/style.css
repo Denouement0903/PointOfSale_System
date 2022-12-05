@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}  
+:root {
+    --primaryColor: rgb(255, 255, 255);
+    --secondaryColor: rgb(182, 234, 234);
+    --tertiaryColor: rgb(56, 63, 63);
+    --quaternaryColor:  rgb(83, 247, 247);
+    --font-size: 110%;
+}
+
+header{
+ background-color: var(--primaryColor);
+ box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.6);
+ font-size: var(--font-size);
+}
+
+footer {
+    background-color: var(--primaryColor);
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, 0.6);
+    font-size: var(--font-size);  
+}
