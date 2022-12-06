@@ -47,20 +47,11 @@ let  fProducts = document.querySelector('.featured-products');
  function show(){
     products.forEach((item)=>{
         fProducts.innerHTML += 
-        `<div class="row row-cols-2 row-cols-md-2 g-4 my-2 justify-content-center d-flex ">
-          <div class="col">
-            <div class="card bg-danger bg-opacity-25">
-              <img src="${item.img}" class="card-img-top img-fluid" alt="${item.alt}">
-              <div class="card-body">
-                <h5 class="card-title">${item.productName}</h5>
-                <p class="card-text">${item.description}</p>
-                <h5>${"$"}${item.price}</h5>                 
-                <button class="rounded-2 bg-danger">Order</button>
-              </div>
-            </div>
-          </div>
+        `
         `
     })
  }
 
  show()
+
+
