@@ -1,0 +1,30 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "productName": "Ramen",
+            "price": 33
+        },
+        {
+            "id": 2,
+            "productName": "Chow mein",
+            "price": 69
+
+        },
+        {
+            "id": 3,
+            "productName": "Pho",
+            "price": 42           
+        },
+        {
+            "id": 4,
+            "productName": "Cincinnati Chili",
+            "price": 52              
+        },
+        {
+            "id": 5,
+            "productName": "Japchae",
+            "price":  74            
+        }
+    ]
+    }

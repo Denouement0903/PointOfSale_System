@@ -15,7 +15,7 @@
     <!-- JS -->
     <script src="js/code.js" defer></script>
 </head>
-<body>
+<body class="bg-danger bg-opacity-25">
     <header class="w-100">
         <!-- navigation -->
         <nav class="navbar navbar-expand-lg bg-danger bg-opacity-75">
@@ -42,13 +42,103 @@
     <main>
         <!-- landing page -->
         <section class="landing-page">
-            <h1 class="text-center bg-danger bg-opacity-75">Welcome to Yuumei unofficial fan page</h1>
+            <h1 class="text-center bg-danger my-5">Welcome to NuUDLES</h1>
+        </section>
+        <!-- featured products -->
+        <section class="featured-products">
+          <h2 class="text-center bg-danger bg-opacity-50">Products</h2>
+          <div class="row row-cols-2 row-cols-md-2 g-4 my-2">
+            <!-- Ramen -->
+            <div class="col">
+              <div class="card bg-danger bg-opacity-25">
+                <img src="./assets/images/ramen1.jpg" class="card-img-top img-fluid" alt="Ramen">
+                <div class="card-body">
+                  <h5 class="card-title">Ramen</h5>
+                  <p class="card-text">A delicious Japanese noodle dish consisting of Chinese-style wheat noodles.
+                    It is first recorded to have appeared in Yokohama Chinatown in the early 20th century.
+                  </p>
+                  <h5>$33</h5>
+                  <!-- checkout link -->
+                  <button class="rounded-2 bg-danger">Order</button>
+                </div>
+              </div>
+            </div>
+            <!-- Chow mein -->
+            <div class="col">
+              <div class="card bg-danger bg-opacity-25">
+                <img src="./assets/images/chow-mein1.jpg" class="card-img-top img-fluid h-100" alt="Chow mein">
+                <div class="card-body">
+                  <h5 class="card-title">Chow mein</h5>
+                  <p class="card-text">A dish popular throughout the Chinese diaspora. Chow mein are noodles that have been stir-fried to mouthwatering tastiness.</p>
+                  <h5>$69.99</h5>
+                  <!-- checkout link -->
+                  <button class="rounded-2 bg-danger">
+                    Order</button>                  
+                </div>
+              </div>
+            </div>
+            <!-- Pho -->
+            <div class="col d-flex justify-content-center align-content-center">
+              <div class="card bg-danger bg-opacity-25">
+                <img src="./assets/images/pho1.jpg" class="card-img-top" alt="Pho">
+                <div class="card-body">
+                  <h5 class="card-title">Pho</h5>
+                  <p class="card-text">A Vietnamese soup dish that consists of a nice broth , rice noodles and more. Also considered Vietnam's national dish.</p>
+                  <h5>$42.98</h5>
+                  <!-- checkout link -->
+                  <button class="rounded-2 bg-danger">Order</button>                  
+                </div>
+              </div>
+            </div>
+            <!-- Cincinnati Chili -->
+            <div class="col">
+              <div class="card bg-danger bg-opacity-25">
+                <img src="./assets/images/cincinnati-chili1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cincinnati Chili</h5>
+                  <p class="card-text">Big and tasty. Invented by Macedonian immigrants with Italian noodles and Mediterranean spices.</p>
+                  <h5>$52</h5>
+                  <!-- checkout link -->
+                  <button class="rounded-2 bg-danger">Order</button> 
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-danger bg-opacity-25">
+                <img src="./assets/images/japchae1.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Japchae</h5>
+                  <p class="card-text">A bit sweet and also savory, Japchae are often referred to as glass noodles do the transparency of the noodles. </p>
+                  <!-- checkout link -->
+                  <button class="rounded-2 bg-danger">Order</button> 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
         </section>
         
     </main>
     <footer class="bg-danger bg-opacity-75">
+      <!-- Form -->
+      <form class="my-4"
+  action="https://formspree.io/f/xlevnzeq"
+  method="POST"
+>
+  <label>
+    Email us:
+    <input type="email" name="email">
+  </label>
+  <label>
+  Comments:
+    <textarea class="mt-3" name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
         <div class="social-icons">
-            <ul>
+            <ul class="d-flex list-unstyled gap-4 align-content-center justify-content-center">
                 <li><a href="#"><i>Github</i></a></li>
                 <li><a href="#"><i>Netlify</i></a></li>
                 <li><a href="#"><i>Facebook</i></a></li>

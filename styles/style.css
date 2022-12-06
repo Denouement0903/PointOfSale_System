@@ -25,6 +25,11 @@ footer {
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0, 0.6);
     font-size: var(--font-size);  
 } */
+html {
+    background: rgb(63,212,251);
+    background: radial-gradient(circle, rgba(63,212,251,1) 0%, rgba(252,70,107,1) 100%);
+
+}
 .landing-page {
     background-image: url(https://i.postimg.cc/fRtBLYt7/placeholder2.jpg);
     background-repeat: no-repeat;
@@ -32,6 +37,13 @@ footer {
     height: 100vh;
     object-fit: cover;
 }
-.navbar {
+.navbar,h1, h2 {
     box-shadow: 0 .5rem 1rem rgba(12, 121, 230, 0.6);
+}
+.card {
+    box-shadow: 0 .5rem 2rem rgba(12, 121, 230, 0.6);
+}
+
+button:hover, a:hover {
+    background-color: rgb(25, 151, 189) !important;
 }
