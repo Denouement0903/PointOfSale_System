@@ -57,6 +57,7 @@ let  fProducts = document.querySelector('tbody');
         <td> <button class="rounded-4 bg-danger remove" onclick="del()">Remove</button></td>
         <td> <button class="rounded-4 bg-success">Add</button></td>
       </tr>
+    
         `
     })
  }

@@ -16,6 +16,7 @@ let checkoutItems = document.querySelector('#checkout');
 
 (function show(){
     checkoutItems.innerHTML += `
-    <img src="">
+    <img src="../assets/images/southkorea1.jpg" class="w-100">
+    
     `
 }())
