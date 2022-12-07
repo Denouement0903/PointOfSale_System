@@ -43,26 +43,29 @@ JSON.parse(localStorage.getItem('products')) : [
     
 ];
 
-let fProducts = document.querySelector('.featured-products');
+let  fProducts = document.querySelector('tbody');
  function show(){
-    products.forEach((item)=>{
+     products.forEach((item)=>{
         fProducts.innerHTML += 
-        `<div class="row row-cols-2 row-cols-md-2 g-4 my-2 justify-content-center d-flex ">
-          <div class="col">
-            <div class="card bg-danger bg-opacity-25">
-              <img src="${item.img}" class="card-img-top img-fluid" alt="${item.alt}">
-              <div class="card-body">
-                <h5 class="card-title">${item.productName}</h5>
-                <p class="card-text">${item.description}</p>
-                <h5>${"$"}${item.price}</h5>                 
-                <button class="rounded-2 bg-danger" onclick="append(${products.item})"><a href="../html/checkout.html">Order</a></button>
-              </div>
-            </div>
-          </div>
+        `
+        <tr>
+        <th scope="row">${item.id}</th>
+        <td>${item.productName}</td>
+        <td class="quantity">#</td>
+        <td>${item.price}</td>
+        <td></td>
+        <td> <button class="rounded-4 bg-danger remove" onclick="del()">Remove</button></td>
+        <td> <button class="rounded-4 bg-success">Add</button></td>
+      </tr>
         `
     })
  }
- show()
- 
 
+ show()
+
+let tableData = document.querySelector('.remove')
+
+function del(){
+    tableData = "";
+}
 
