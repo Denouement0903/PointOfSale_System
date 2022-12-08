@@ -44,6 +44,7 @@ JSON.parse(localStorage.getItem('products')) : [
 ];
 
 let fProducts = document.querySelector('.featured-products');
+
  function show(){
     products.forEach((item)=>{
         fProducts.innerHTML += 
@@ -55,7 +56,7 @@ let fProducts = document.querySelector('.featured-products');
                 <h5 class="card-title">${item.productName}</h5>
                 <p class="card-text">${item.description}</p>
                 <h5>${"$"}${item.price}</h5>                 
-                <button class="rounded-2 bg-danger" onclick="append(${products.item})"><a href="../html/checkout.html">Order</a></button>
+                <button id="order" class="rounded-2 bg-danger")">Order</button>
               </div>
             </div>
           </div>
@@ -63,6 +64,10 @@ let fProducts = document.querySelector('.featured-products');
     })
  }
  show()
- 
+
+
+
+
+
 
 

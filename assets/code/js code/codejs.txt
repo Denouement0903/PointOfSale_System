@@ -43,37 +43,26 @@ JSON.parse(localStorage.getItem('products')) : [
     
 ];
 
-let checkout = document.querySelectorAll('#checkout-products');
-
-
-localStorage.setItem('checkoutProducts', JSON.stringify(products));
-
-let x = JSON.parse(localStorage.getItem('checkoutProducts'));
-
-console.log(x);
-
-
-let checkoutItems = document.querySelector('#checkout-body');
-
-(function show(){
+let fProducts = document.querySelector('.featured-products');
+ function show(){
     products.forEach((item)=>{
-        checkoutItems.innerHTML += 
-        `
-
+        fProducts.innerHTML += 
+        `<div class="row row-cols-2 row-cols-md-2 g-4 my-2 justify-content-center d-flex ">
+          <div class="col">
+            <div class="card bg-danger bg-opacity-25">
+              <img src="${item.img}" class="card-img-top img-fluid" alt="${item.alt}">
+              <div class="card-body">
+                <h5 class="card-title">${item.productName}</h5>
+                <p class="card-text">${item.description}</p>
+                <h5>${"$"}${item.price}</h5>                 
+                <button id="order" class="rounded-2 bg-danger")">Order</button>
+              </div>
+            </div>
+          </div>
         `
     })
-}())
+ }
+ show()
+ 
 
-// let array = [];
 
-// function append(item){
-//     checkout.innerHTML += item;
-//     array.push(item);
-//     console.log(array);
-//     while(array.includes(item)){
-//         // array = [];
-        
-//         break;
-
-//     }
-// }

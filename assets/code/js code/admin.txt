@@ -1,0 +1,32 @@
+
+let  fProducts = document.querySelector('tbody');
+ function show(){
+    products.sort((x,y)=>)
+     products.forEach((item)=>{
+        fProducts.innerHTML += 
+        `
+        <tr>
+        <th scope="row">${item.id}</th>
+        <td>${item.productName}</td>
+        <td class="quantity">#</td>
+        <td>${item.price}</td>
+        <td></td>
+        <td> <button class="rounded-4 bg-danger remove m-2" onclick="del()"><i class="fa-solid fa-trash"></i></button></td>
+        <td> <button class="rounded-4 bg-success"><i class="fa-solid fa-pen-to-square"></i></button></td>
+      </tr>
+        `
+    })
+ }
+ show()
+
+
+// let btn = document.querySelector('#save');
+// // output
+// let output = document.querySelector('tbody')
+// // input
+// let adding = document.querySelector('#adding').value;
+
+
+// function add(){
+//     adding += output.innerHTML;
+// }

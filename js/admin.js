@@ -54,19 +54,23 @@ let  fProducts = document.querySelector('tbody');
         <td class="quantity">#</td>
         <td>${item.price}</td>
         <td></td>
-        <td> <button class="rounded-4 bg-danger remove" onclick="del()">Remove</button></td>
-        <td> <button class="rounded-4 bg-success">Add</button></td>
+        <td> <button class="rounded-4 bg-danger remove m-2" onclick="del()"><i class="fa-solid fa-trash"></i></button></td>
+        <td> <button class="rounded-4 bg-success"><i class="fa-solid fa-pen-to-square"></i></button></td>
       </tr>
     
         `
     })
  }
-
  show()
 
-let tableData = document.querySelector('.remove')
 
-function del(){
-    tableData = "";
+let btn = document.querySelector('#save');
+// output
+let output = document.querySelector('tbody')
+// input
+let adding = document.querySelector('#adding').value;
+
+
+function add(){
+    adding += output.innerHTML;
 }
-
