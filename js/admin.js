@@ -48,15 +48,15 @@ let  fProducts = document.querySelector('tbody');
      products.forEach((item)=>{
         fProducts.innerHTML += 
         `
-        <tr>
-        <th scope="row">${item.id}</th>
-        <td>${item.productName}</td>
-        <td class="quantity">#</td>
-        <td>${item.price}</td>
-        <td></td>
+        <tr id="name">
+        <th scope="row" id="name">${item.id}</th>
+        <td id="name2">${item.productName}</td>
+        <td id="name3"class="quantity">#</td>
+        <td id="name4">${item.price}</td>
+        <td id="name5"></td>
         <td> <button class="rounded-4 bg-danger remove m-2" onclick="del()"><i class="fa-solid fa-trash"></i></button></td>
         <td> <button class="rounded-4 bg-success"><i class="fa-solid fa-pen-to-square"></i></button></td>
-      </tr>
+        </tr>
     
         `
     })
@@ -73,4 +73,10 @@ let adding = document.querySelector('#adding').value;
 
 function add(){
     adding += output.innerHTML;
+}
+
+let td = document.querySelector('#name');
+
+function del(){
+        td.innerHTML = "";
 }

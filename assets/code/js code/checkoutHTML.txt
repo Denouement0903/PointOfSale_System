@@ -1,0 +1,8 @@
+        <!-- add checkout -->
+        <form>
+          <input id="id" type="text">
+          <input id="productName" type="text">
+          <input id="price" type="text">
+          <!-- predefined in JS -->
+
+        </form>

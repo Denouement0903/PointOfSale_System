@@ -1,3 +1,4 @@
+// localStorage.removeItem('products');
 
 let products = JSON.parse(localStorage.getItem('products')) ?
 JSON.parse(localStorage.getItem('products')) : [
@@ -65,24 +66,6 @@ let checkoutItems = document.querySelector('#tbody-checkout');
     })
 }());
 
-// ====
-
-(function total() {
-    let price = JSON.parse(localStorage.getItem('checkoutProducts'))
-    
-    const sum = price.reduce((accumulator, object) => {
-        return accumulator + object.price;
-    }, 0);
-    console.log(sum);
-    document.write(sum)
-}());
-
-let totalOutput = document.querySelector('#totalOutput');
-
-
-
-// ====
-
 function addStuff(event){
     event.preventDefault()
     let id =  document.querySelector('#id').value
@@ -94,10 +77,12 @@ function addStuff(event){
         productName  ,
         price   
     }
-    
+
     products.push(obj);
     localStorage.setItem('products', JSON.stringify(products));
-    // localStorage.removeItem('products');
+    (function displayData(){
+        console.table(products)
+    }());
 }
 
 // gives doc an ID and adds an addEventListener for ID using the function
@@ -119,8 +104,5 @@ function addStuff(event){
 
 //     }
 // }
-
-
-
 
 
