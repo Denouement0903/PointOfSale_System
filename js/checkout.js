@@ -58,9 +58,9 @@ let checkoutItems = document.querySelector('#tbody-checkout');
     products.forEach((item)=>{
         checkoutItems.innerHTML += 
         `
-            <td>${item.id}</td>
-            <td>${item.productName}</td>
-            <td>${item.price}</td>
+        <td>${item.id}</td>
+        <td>${item.productName}</td>
+        <td>${item.price}</td>
         `
     })
 }());
@@ -68,7 +68,7 @@ let checkoutItems = document.querySelector('#tbody-checkout');
 // ====Total start====
 
 (function total() {
-    let price = JSON.parse(localStorage.getItem('checkoutProducts'))
+    let price = JSON.parse(localStorage.getItem('checkoutProducts'));
     
     const sum = price.reduce((a, b) => {
         // unary operator
@@ -83,6 +83,7 @@ let checkoutItems = document.querySelector('#tbody-checkout');
     
     `
 }());
+
 
 // ====Total end====
 
@@ -104,11 +105,8 @@ let checkoutItems = document.querySelector('#tbody-checkout');
 let sort = document.querySelector('#sort');
 
 (function sortingByName(){
-    console.table(products);
+    console.log(products.sort());
 }());
-
-// filtering
-//  console.log(products.filter((products => products.length > 1)))
 
 
 

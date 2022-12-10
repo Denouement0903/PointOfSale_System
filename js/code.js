@@ -64,10 +64,26 @@ let fProducts = document.querySelector('.featured-products');
     })
  }())
 
-
  let emptyArray = [];
-
+ 
  localStorage.setItem("toCheckout", JSON.stringify(emptyArray));
+
+let btnOrder = document.querySelectorAll('#order');
+
+btnOrder.forEach((allBtn)=>{
+  allBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let indexNum = allBtn.id -1;
+  pushing(indexNum)
+  })
+})
+
+function pushing(indexNum2) {
+  emptyArray.push(products);
+  localStorage.setItem("toCheckout", JSON.stringify(emptyArray));
+}
+
+
 
 
 
