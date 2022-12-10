@@ -49,8 +49,8 @@ let checkout = document.querySelectorAll('#checkout-products');
 localStorage.setItem('checkoutProducts', JSON.stringify(products));
 
 // check data
-let x = JSON.parse(localStorage.getItem('checkoutProducts'));
-console.table(x);
+let check = JSON.parse(localStorage.getItem('checkoutProducts'));
+// console.table(check);
 
 // display data on html
 let checkoutItems = document.querySelector('#tbody-checkout');
@@ -65,40 +65,53 @@ let checkoutItems = document.querySelector('#tbody-checkout');
     })
 }());
 
-// ====
+// ====Total start====
 
 (function total() {
     let price = JSON.parse(localStorage.getItem('checkoutProducts'))
     
-    const sum = price.reduce((accumulator, object) => {
-        return accumulator + object.price;
+    const sum = price.reduce((a, b) => {
+        // unary operator
+        return (++a + ++b.price);
     }, 0);
-    console.log(sum);
-    document.write(sum)
+    console.table(sum);
+    // display total
+    let totalOutput = document.querySelector('#total');
+    totalOutput.innerHTML += 
+    `
+    <p class="ms-2"><strong>${sum}</strong></p>
+    
+    `
 }());
 
-let totalOutput = document.querySelector('#totalOutput');
+// ====Total end====
+
+// let btnOrder = document.querySelectorAll('#order');
+
+
+// btnOrder.addEventListener('click', (e)=>{
+//   e.preventDefault();
+//   checkoutDisplay = JSON.parse(localStorage.getItem('toCheckout'));
+//   console.log(checkoutDisplay)
+
+// })
 
 
 
-// ====
 
-function addStuff(event){
-    event.preventDefault()
-    let id =  document.querySelector('#id').value
-    let productName = document.querySelector('#productName').value
-    let price = document.querySelector('#price').value
-    let obj={
-        // input for id
-        id ,
-        productName  ,
-        price   
-    }
-    
-    products.push(obj);
-    localStorage.setItem('products', JSON.stringify(products));
-    // localStorage.removeItem('products');
-}
+//Sort
+
+let sort = document.querySelector('#sort');
+
+(function sortingByName(){
+    console.table(products);
+}());
+
+// filtering
+//  console.log(products.filter((products => products.length > 1)))
+
+
+
 
 // gives doc an ID and adds an addEventListener for ID using the function
 // using ID to  link the addStuff()

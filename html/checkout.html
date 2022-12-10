@@ -48,13 +48,12 @@
           </nav>
     </header>
     <main>
-    <section>
       <section>
         <h2 class="text-center bg-danger bg-opacity-25 animate__animated animate__bounceInRight">Checkout</h2>
           <!-- sort -->
-          <button type="button" class="btn btn-danger m-2">Sort by name</button>
+          <button type="button" class="btn btn-danger m-2" onclick="sortingByName()">Sort by name</button>
           <!-- filter -->
-          <button type="button" class="btn btn-danger m-2">Filter by price</button>
+          <button id="filter" type="button" class="btn btn-danger m-2">Filter by price</button>
       </section>
       <section id="checkout-products">
       <table class="table table-dark table-hover ">
@@ -68,22 +67,11 @@
 
           </tbody>  
         </table>
-        <button id="total" class="bg-success rounded-3 m-3">Total:</button>
-        <input id="operartion" type="text" readonly class="rounded m-3">
-        
-
-
-
-        <!-- add checkout -->
-        <h4>Add new Item</h4>
-        <form class="gap-2">
-          <input class="rounded-3 m-2" id="id" type="number">
-          <input class="rounded-3 m-2" id="productName" type="text">
-          <input class="rounded-3 m-2" id="price" type="number">
-          <!-- predefined in JS -->
-          <button class="rounded-2 bg-danger" id="checkoutAdd" onclick="addStuff(event)">Click</button>
-        </form>
-      </section>
+        <!-- total -->
+        <div id="total" class="d-flex">
+          <h5><strong> Total:</strong></h5>
+           
+        </div>
       
       </main>
       <footer class="bg-danger bg-opacity-75">

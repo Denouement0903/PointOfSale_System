@@ -45,7 +45,7 @@ JSON.parse(localStorage.getItem('products')) : [
 
 let fProducts = document.querySelector('.featured-products');
 
- function show(){
+ (function show(){
     products.forEach((item)=>{
         fProducts.innerHTML += 
         `<div class="row row-cols-2 row-cols-md-2 g-4 my-2 justify-content-center d-flex ">
@@ -62,8 +62,13 @@ let fProducts = document.querySelector('.featured-products');
           </div>
         `
     })
- }
- show()
+ }())
+
+
+ let emptyArray = [];
+
+ localStorage.setItem("toCheckout", JSON.stringify(emptyArray));
+
 
 
 

@@ -44,7 +44,7 @@ JSON.parse(localStorage.getItem('products')) : [
 ];
 
 let  fProducts = document.querySelector('tbody');
- function show(){
+ (function show(){
      products.forEach((item)=>{
         fProducts.innerHTML += 
         `
@@ -60,8 +60,7 @@ let  fProducts = document.querySelector('tbody');
     
         `
     })
- }
- show()
+ }())
 
 
 let btn = document.querySelector('#save');
@@ -77,6 +76,32 @@ function add(){
 
 let td = document.querySelector('#name');
 
+
+// deletes only one row
 function del(){
         td.innerHTML = "";
+}
+
+
+
+// create new product
+function addStuff(event){
+    event.preventDefault()
+    let id =  document.querySelector('#id').value
+    let productName = document.querySelector('#productName').value
+    let price = document.querySelector('#price').value
+    let obj={
+        // input for id
+        id ,
+        productName  ,
+        price   
+    }
+    
+    products.push(obj);
+    localStorage.setItem('products', JSON.stringify(products));
+    // localStorage.removeItem('products');
+
+    // if (id in obj){
+    // }
+
 }

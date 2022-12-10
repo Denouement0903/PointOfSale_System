@@ -63,26 +63,28 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-grid col gap-2">
-        <!-- id -->
-        <h6>ID</h6>
-      <input id="adding" type="text" class="rounded-3">
-        <!-- image -->
-        <h6>Image</h6>
-      <input id="adding" type="text" class="rounded-3">
-      <!-- name -->
-      <h6>Name</h6>
-      <input id="adding" type="text" class="rounded-3">
-      <!-- price -->
-      <h6>Price</h6>
-      <input id="adding" type="text" class="rounded-3">
-      <!-- description -->
-      <h6>Description</h6>
-      <input id="adding" type="text" class="rounded-3">
-
+        <form class="gap-2">
+          <!-- id -->
+          <h6>ID</h6>
+          <input class="rounded-3 m-2" id="id" type="number">
+          <!-- image -->
+          <h6>Image</h6>
+          <input class="rounded-3 m-2" id="image" type="image">
+          <!-- name -->
+          <h6>Name</h6>
+          <input class="rounded-3 m-2" id="productName" type="text">
+          <!-- price -->
+          <h6>Price</h6>
+          <input class="rounded-3 m-2" id="price" type="number">
+          <!-- description -->
+          <h6>Description</h6>
+          <input class="rounded-3 m-2" id="description" type="text">
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button id="save" type="button" class="btn btn-danger bg-opacity-50">Save</button>
+        <!-- predefined in JS -->
+        <button class="rounded-2 bg-danger" id="checkoutAdd" onclick="addStuff(event)">Add</button>
       </div>
     </div>
   </div>
